@@ -35,6 +35,7 @@ jobs:
       run: |
         cd mkdocs/
         mkdocs build -d ../www/
+        touch ../www/.nojekyll
     - name: Deploy
       run: |
         cd www/
