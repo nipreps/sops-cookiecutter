@@ -1,0 +1,43 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [ mkdocs ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: mkdocs
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Setup Git & Install dependencies
+      run: |
+        git config --global user.email "nipreps@gmail.com"
+        git config --global user.name "nipreps-bot"
+        python -m pip install --upgrade pip
+        pip install -r mkdocs/requirements.txt
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+        path: www
+    - name: Clean up master
+      run: |
+        cd www/
+        git ls-files -z | xargs -0 git rm -f
+    - name: Build
+      run: |
+        cd mkdocs/
+        mkdocs build -d ../www/
+    - name: Deploy
+      run: |
+        cd www/
+        echo -e "a\n*\nq\n"|git add -i
+        git commit -am "auto: deploy new website"
+        git push

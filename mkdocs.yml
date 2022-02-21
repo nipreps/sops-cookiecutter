@@ -1,0 +1,54 @@
+site_name: "MRIQC :: SOPs"
+site_description: Templates and bootstrapping documentation for MRI standard operating procedures (SOPs)
+site_author: The NiPreps developers
+site_url: https://nipreps.org/mriqc-sops
+google_analytics: ['UA-170131052-1', 'www.nipreps.org']
+
+# Copyright
+copyright: Copyright &copy; 2022
+
+nav:
+    - Home: index.md
+    - Change History: changes.md
+    - Recruitment, Scheduling, and Screening:
+      - Introduction: recruitment-scheduling-screening/index.md
+      - Example 1: recruitment-scheduling-screening/example1.md
+      - Example 2: recruitment-scheduling-screening/example2.md
+    - Data collection: data-collection.md
+    - Data storage: data-storage.md
+    - After the session: post-session.md
+    - Quality Assessment and Control: qa-qc.md
+    - Preprocessing: preprocessing.md
+    - Release of data: release.md
+theme:
+  name: material
+  features:
+    - tabs
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - markdown_include.include:
+      base_path: docs
+
+plugins:
+  - toc-sidebar
+
+extra_css:
+  - stylesheets/extra.css

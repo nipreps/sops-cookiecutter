@@ -1,0 +1,4 @@
+mkdocs
+mkdocs-material
+markdown-include
+git+https://github.com/Mandy91/mkdocs-toc-sidebar-plugin.git@drop_python_2.7_support#egg=mkdocs-toc-sidebar-plugin
