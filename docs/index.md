@@ -16,33 +16,33 @@ Because this iterative advance of textual-formatted information is naturally han
 
 ## How to use this template
 
-1. Create a fork of this project under your personal or your organization's GitHub account (in the following, please replace `<user-or-institution>` with the actual name of your or your organization's GitHub account).
-1. Rename your project (replace `<sops-repo-name>` in the following).
-1. Check on the public/private status of the repository - you might not want to have your SOPs public until the study is ready to do so.
-1. The documentation will be found under the `docs/` folder.
-1. Although you can edit your SOPs online in your repository, you probably enjoy more flexibility if you install them locally:
+1. Click on the "Use this template" button in the home page of nipreps/mriqc-sops. This will redirect you to the interface to to create a new repository. 
+2. Choose your <user-or-institution> as the owner of the new repository and rename it with your <sops-repo-name>. (replace in the following, please replace `<user-or-institution>` with the actual name of your or your organization's GitHub account and `<sops-repo-name>` with the repository name).
+3. Check on the public/private status of the repository - you might not want to have your SOPs public until the study is ready to do so.
+4. The documentation will be found under the `docs/` folder.
+5. Although you can edit your SOPs online in your repository, you probably enjoy more flexibility if you install them locally:
    ```
    cd $HOME/projects/
    git clone git@github.com:<user-or-institution>/<sops-repo-name>.git
    ```
-1. Check locally how your new documents will render:
-    1. Install the rendering software (called `mkdocs`) and dependencies by running:
+6. Check locally how your new documents will render:
+    6.1. Install the rendering software (called `mkdocs`) and dependencies by running:
        ```
        pip install -r requirements.txt
        ```
-    1. Run the local web server
+    6.2. Run the local web server
        ```
        mkdocs serve
        ```
-    1. Open a browser and go to the URL stated by the output of the previous command, which reads like:
+    6.3. Open a browser and go to the URL stated by the output of the previous command, which reads like:
        ```
        INFO     -  [08:53:36] Serving on http://127.0.0.1:8000/mriqc-sops/
        ```
-1. Now you are ready to revise each of the documents, editing and updating accordingly to your experiments:
-    1. Update the project's name, description, authors, etc. at the head of the `/mkdocs.yml` file.
-    1. Update the project's name and introduction in the `docs/index.md` file.
-    1. Customize everything to fit your needs.
-    1. Commit your changes back to repository:
+7. Now you are ready to revise each of the documents, editing and updating accordingly to your experiments:
+    7.1. Update the project's name, description, authors, etc. at the head of the `/mkdocs.yml` file.
+    7.2. Update the project's name and introduction in the `docs/index.md` file.
+    7.3. Customize everything to fit your needs.
+    7.4. Commit your changes back to repository:
        ```
        git commit -am "Updated the recruitment procedures with a new e-mail template"
        ```
