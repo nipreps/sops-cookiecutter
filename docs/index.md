@@ -16,8 +16,8 @@ Because this iterative advance of textual-formatted information is naturally han
 
 ## How to use this template
 
-1. Create a fork of this project under your personal or your organization's GitHub account (in the following, please replace `<user-or-institution>` with the actual name of your or your organization's GitHub account).
-1. Rename your project (replace `<sops-repo-name>` in the following).
+1. Click on the "Use this template" button in the home page of nipreps/mriqc-sops. This will redirect you to the interface to to create a new repository. 
+1. Choose your <user-or-institution> as the owner of the new repository and rename it with your <sops-repo-name>. (replace in the following, please replace `<user-or-institution>` with the actual name of your or your organization's GitHub account and `<sops-repo-name>` with the repository name).
 1. Check on the public/private status of the repository - you might not want to have your SOPs public until the study is ready to do so.
 1. The documentation will be found under the `docs/` folder.
 1. Although you can edit your SOPs online in your repository, you probably enjoy more flexibility if you install them locally:
