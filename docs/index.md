@@ -109,11 +109,35 @@ Given the above settings file, if we want our SOPs to show the name of the proje
 Some metadata MUST remain private at all times.
 If you want to keep secrets that are inaccessible to others (even after making the SOPs open by changing their visibility), the easiest (and yet secure) way of achieving this is initiating a private repository with a config file for the private metadata.
 
-Finally, uncomment the following line in the `/mkdocs.yml` configuration file:
+- [ ] Create a [new repository on GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo). **Make sure the repository IS PRIVATE**.
+- [ ] In the new repository, **ONLY one file should be found** at the root: `secrets.yml`.
+     That file will look as follows:
+
+``` yaml title="Example of secrets file"
+{% include 'examples/mkdocs-secrets.yml' %}
+```
+
+- [ ] Copy the URL of the new repository.
+    This will, typically, take a form like `https://github.com/gh_handle/my-sops-secrets.git`, where `gh_handle` is a GitHub username and `my-sops-secrets` is the name of the repository you set when you started the secrets repositorty.
+    With the URL, please [add a git submodule](https://github.blog/2016-02-01-working-with-submodules/) to the repo:
+
+    ``` bash title="Make sure your URL is followed by the word 'secrets'"
+    git submodule add https://github.com/gh_handle/my-sops-secrets.git secrets
+    ```
+
+- [ ] Finally, uncomment the line pointing at `secrets/settings.yml` in *plugins* section of the `/mkdocs.yml` general configuration file:
 
 ``` yaml title="Enabling private metadata"
 {% include 'examples/mkdocs-secrets.yml' %}
 ```
+
+- [ ] From this moment on, you can use these secrets with the following replacement pattern: `{{ '{{ secrets.logins.password_computer1 | default("*****") }}' }}`.
+    The default filter allows the replacement of unavailable secrets (because in this case the user does not have access to the secret) with redaction symbols.
+    For example, using `{{ '{{ secrets.logins.password_computer1 | default("*****") }}' }}` at this point produces a series of stars `{{ secrets.logins.password_computer1 | default("*****") }}` to indicate that a secret could not be accessed at this point.
+
+!!! warning "To ensure your secrets are not exposed, you just need to protect the little submodule"
+
+    Now private information is accessible only for users who have access to the submodule, and they will need to explicitly add the submodule for the secrets to be rendered.
 
 ## Snapshotting the documentation for archival and dissemination
 
