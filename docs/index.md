@@ -113,8 +113,8 @@ If you want to keep secrets that are inaccessible to others (even after making t
 - [ ] In the new repository, **ONLY one file should be found** at the root: `secrets.yml`.
      That file will look as follows:
 
-``` yaml title="Example of secrets file"
-{% include 'examples/mkdocs-secrets.yml' %}
+``` yaml title="Example of configuration file storing private information"
+{% include 'examples/secrets.yml' %}
 ```
 
 - [ ] Copy the URL of the new repository.
