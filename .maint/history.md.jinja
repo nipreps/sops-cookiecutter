@@ -1,0 +1,73 @@
+
+{#- macro: render_subject -#}
+{%- macro render_subject(subject) -%}
+{%- set sub_list = subject.split(":", 1) -%}
+{%- if sub_list|length == 2 %}
+{%- set title = sub_list[1].strip() -%}{{ sub_list[0].strip().upper() }}: {{ title[0]|upper }}{{ title[1:] }}
+{%- else %}{{ subject.strip()[0]|upper }}{{ subject.strip()[1:] }}
+{% endif -%}
+{%- endmacro -%}
+{#- macro: render_author -#}
+{%- macro render_author(author) -%}
+{%- if author.split(" ")|length > 1 %}{{ author.strip()|title }}
+{%- else %}{{ author.strip() }}
+{% endif -%}
+{%- endmacro -%}
+{#- macro: render_commit -#}
+{%- macro render_commit(commit) -%}
+- {{ render_subject(commit.convention.subject|default(commit.subject)) }} ([{{ commit.hash|truncate(7, True, '') }}]({{ commit.url }}) by {{ render_author(commit.author_name) }}).
+{%- if commit.text_refs.issues_not_in_subject %} Related issues/PRs: {% for issue in commit.text_refs.issues_not_in_subject -%}
+{% if issue.url %}[{{ issue.ref }}]({{ issue.url }}){% else %}{{ issue.ref }}{% endif %}{% if not loop.last %}, {% endif -%}
+{%- endfor -%}{%- endif -%}
+{%- for trailer_name, trailer_value in commit.trailers.items() -%}
+{%- if trailer_value|is_url %} [{{ trailer_name }}]({{ trailer_value }})
+{%- else %} {{ trailer_name }}: {{ trailer_value }}{% endif %}
+{%- if not loop.last %},{% endif %}
+{%- endfor -%}
+{%- endmacro -%}
+
+{#- macro: render_section -#}
+{%- macro render_section(section) -%}
+### {{ section.type or "Misc" }}
+
+{% for commit in section.commits|sort(attribute='author_date',reverse=true)|unique(attribute='subject') -%}
+{{ render_commit(commit) }}
+{% endfor %}
+{%- endmacro -%}
+
+{#- macro: render_version -#}
+{%- macro render_version(version) -%}
+{%- if version.tag or version.planned_tag -%}
+## [{{ version.tag or version.planned_tag }}]({{ version.url }}){% if version.date %} ({{ version.date.strftime('%B %d, %Y') }}){% endif %}
+
+<small>[Compare with {{ version.previous_version.tag|default("first commit") }}]({{ version.compare_url }})</small>
+{%- else -%}
+## Unreleased
+
+<small>[Compare with latest]({{ version.compare_url }})</small>
+{%- endif %}
+{% for type in changelog.sections %}
+{%- if type in version.sections_dict %}
+{%- with section = version.sections_dict[type] %}
+{{ render_section(section) }}
+{%- endwith %}
+{%- endif %}
+{%- endfor %}
+{%- if not (version.tag or version.planned_tag) %}
+<!-- insertion marker -->{% endif %}
+{% endmacro -%}
+
+{#- template -#}
+{%- if not in_place -%}
+All notable changes to these SOPs are documented below, starting with the most recent version of the document.
+
+!!! note "You found an error"
+
+	If you want to check the list of open issues, please proceed to our [issue tracker]({{ changelog.remote_url }}/issues).
+
+	If you have identified a problem, a typo, or something missing, and you know it is not in our tracker, please report it by [creating a new issue]({{ changelog.remote_url }}/issues/new).
+
+{% endif %}<!-- insertion marker -->
+{% for version in changelog.versions_list -%}
+{{ render_version(version) }}
+{%- endfor -%}
