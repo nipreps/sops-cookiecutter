@@ -111,10 +111,12 @@ If you want to keep secrets that are inaccessible to others (even after making t
 
 - [ ] Create a [new repository on GitHub](https://docs.github.com/en/get-started/quickstart/create-a-repo). **Make sure the repository IS PRIVATE**.
 - [ ] In the new repository, **ONLY one file should be found** at the root: `secrets.yml`.
-    That file will look as follows:
-   ``` yaml title="Example of secrets file"
-   {% include 'examples/mkdocs-secrets.yml' %}
-   ```
+     That file will look as follows:
+
+``` yaml title="Example of secrets file"
+{% include 'examples/mkdocs-secrets.yml' %}
+```
+
 - [ ] Copy the URL of the new repository.
     This will, typically, take a form like `https://github.com/gh_handle/my-sops-secrets.git`, where `gh_handle` is a GitHub username and `my-sops-secrets` is the name of the repository you set when you started the secrets repositorty.
     With the URL, please [add a git submodule](https://github.blog/2016-02-01-working-with-submodules/) to the repo:
@@ -125,9 +127,9 @@ If you want to keep secrets that are inaccessible to others (even after making t
 
 - [ ] Finally, uncomment the line pointing at `secrets/settings.yml` in *plugins* section of the `/mkdocs.yml` general configuration file:
 
-     ``` yaml title="Enabling private metadata"
-     {% include 'examples/mkdocs-secrets.yml' %}
-     ```
+``` yaml title="Enabling private metadata"
+{% include 'examples/mkdocs-secrets.yml' %}
+```
 
 - [ ] From this moment on, you can use these secrets with the following replacement pattern: `{{ '{{ secrets.logins.password_computer1 | default("*****") }}' }}`.
     The default filter allows the replacement of unavailable secrets (because in this case the user does not have access to the secret) with redaction symbols.
