@@ -1,11 +1,11 @@
-site_name: "MRIQC :: SOPs"
-site_description: Templates and bootstrapping documentation for MRI standard operating procedures (SOPs)
+site_name: "SOPs template (cookiecutter)"
+site_description: Templates and bootstrapping documentation for standard operating procedures (SOPs)
 site_author: The NiPreps developers
-site_url: https://nipreps.org/mriqc-sops
+site_url: https://www.nipreps.org/sops-cookiecutter/
 google_analytics: ['UA-170131052-1', 'www.nipreps.org']
 
 # Copyright
-copyright: Copyright &copy; 2022
+copyright: Copyright &copy; 2023
 
 nav:
     - Home: index.md
@@ -24,12 +24,26 @@ theme:
   name: material
   features:
     - tabs
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
 
 markdown_extensions:
   - admonition
+  - attr_list
   - footnotes
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -39,16 +53,16 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed
-  - pymdownx.highlight
-  - pymdownx.snippets
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
   - markdown_include.include:
       base_path: docs
 
-plugins:
-  - toc-sidebar
-
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
