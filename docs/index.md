@@ -135,6 +135,10 @@ If you want to keep secrets that are inaccessible to others (even after making t
     The default filter allows the replacement of unavailable secrets (because in this case the user does not have access to the secret) with redaction symbols.
     For example, using `{{ '{{ secrets.logins.password_computer1 | default("*****") }}' }}` at this point produces a series of stars `{{ secrets.logins.password_computer1 | default("*****") }}` to indicate that a secret could not be accessed at this point.
 
+!!! warning "To ensure your secrets are not exposed, you just need to protect the little submodule"
+
+    Now private information is accessible only for users who have access to the submodule, and they will need to explicitly add the submodule for the secrets to be rendered.
+
 ## Snapshotting the documentation for archival and dissemination
 
 Whenever you feel ready to make a *snapshot* of the current state of your SOPs and assign them a new *version* label, the repository you cloned has the tooling to do so easily in a single step.
