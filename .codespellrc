@@ -1,0 +1,5 @@
+[codespell]
+skip = ./site/*,./docs/stylesheets/*
+builtin = clear,rare,en-GB_to_en-US
+count =
+quiet-level = 3
