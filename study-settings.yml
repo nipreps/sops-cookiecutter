@@ -1,0 +1,7 @@
+## Study-wise settings that can be shared publicly
+# Settings can be used with jinja replacements.
+# For instance, the first setting (name) can be included with:
+# {{ settings.general.name }}
+general:
+  name: "SOPs Cookiecutter"
+  repo: nipreps/sops-cookiecutter

@@ -1,57 +1,125 @@
-# <Project Name\>: Standard Operating Procedures
+# *{{ settings.general.name }}*
 
-Standard Operating Procedures (SOPs) bundle the documentation that describes data collection so that experiments can robustly be repeated.
+Standard Operating Procedures (SOPs) bundle the documentation that describes the *nose-to-tail* execution of the experiment (that is, from data collection to final analysis), at an *atomic* level of detail, so that experiments can robustly be repeated.
 Within your lab or your institution, the goal is that experimenters can carry out new data collection according to the overarching study plans with minimal supervision.
 Beyond the doors of your lab or institution, SOPs are a critical tool to maximize the reproducibility of your research by others.
-Although very hardly other researchers will have access to the exact same settings detailed in your SOPs, they document all the incremental, atomic decisions that together implement your methods.
-Therefore, the SOPs should be released alongside datasets and publications to ensure all the procedural detail of you experiment is preserved with results.
 
-!!! info "Checklists"
-    One powerful tool to leverage in your SOPs is the checklist.
-    Checklists are very effective in ensuring all the steps of a procedure are followed to the letter, thereby minimizing the chance of misshapen.
+## Why *{{ settings.general.name }}*?
 
-This template is intended to provide an outline to bootstrap your own SOPs.
-As SOPs are a live documentation hub, the idea is that you iteratively build on top of previous versions.
+*{{ settings.general.name }}* is a boilerplate for SOPs, and it provides a minimally working framework to bootstrap and continue your own SOPs.
+SOPs typically should be a live documentation hub, the idea is that you iteratively build on top of previous versions.
 Because this iterative advance of textual-formatted information is naturally handled by version control systems, we propose Git/GitHub as a convenient way of maintaining and working on this document.
+This also permits many typical operations that implicitly happen with SOPs documents:
+
+* *forking*: someone in an institution created an original SOPs document, which over time got copied over and child documents continued their lives;
+* *branching*: one of those SOPs documents was evolved for a particular study that was almost like the original project, except for minimal differences;
+* *merging*: a branch became important enough to become a constituent part of the original SOPs from which it derived; and
+* *versioning*: it is critical to keep track of all changes in the SOPs, and even more important to take *snapshots* of the document at relevant milestones of its life cycle (e.g., *version - [ ]0*).
+
+All of these operations are naturally part of Git.
+
+## Publishing SOPs
+Although very hardly other researchers will have access to the exact same settings detailed in your SOPs, they document all the incremental decisions that together implement your methods.
+Therefore, making your SOPs accessible alongside datasets and publications is an effective way of maximizing the transparency of your research.
+Indeed, opening your SOPs will ensure all procedural details of you experiment are preserved with the results.
+
+!!! danger "SOPs generated from *{{ settings.general.name }}* CAN BE PRIVATE"
+
+     *{{ settings.general.name }}* does not enforce the public release of your SOPs.
+     Leveraging the authorization system and access permissions of Git, you have full control over who can access your SOPs.
+     Indeed, most projects cannot share their SOPs open until the study has been concluded for a number of reasons.
+
+     If you are using *{{ settings.general.name }}* with GitHub, you only need to make sure you generate your new SOPs in **private** mode or change it to private after creation (see below).
+
 
 ## How to use this template
 
-1. Click on the "Use this template" button in the home page of nipreps/mriqc-sops. This will redirect you to the interface to to create a new repository. 
-1. Choose your <user-or-institution> as the owner of the new repository and rename it with your <sops-repo-name>. (replace in the following, please replace `<user-or-institution>` with the actual name of your or your organization's GitHub account and `<sops-repo-name>` with the repository name).
-1. Check on the public/private status of the repository - you might not want to have your SOPs public until the study is ready to do so.
-1. The documentation will be found under the `docs/` folder.
-1. Although you can edit your SOPs online in your repository, you probably enjoy more flexibility if you install them locally:
-   ```
-   cd $HOME/projects/
-   git clone git@github.com:<user-or-institution>/<sops-repo-name>.git
-   ```
-1. Check locally how your new documents will render:
-    1. Install the rendering software (called `mkdocs`) and dependencies by running:
+### Step 1: derive your own repository from the template
+
+!!! info "SOPs :heart: checklists"
+
+    Checklists are very effective in ensuring all the steps of a procedure are followed to the letter, thereby minimizing the chance of misshapen.
+
+
+- [ ] Click on the "Use this template" button in the home page of [`{{ settings.general.repo }}`](https://github.com/{{ settings.general.repo }}).
+   Alternatively, you can use [this link](https://github.com/new?template_name=sops-cookiecutter&template_owner=nipreps).
+   This will redirect you to the interface to create a new repository:
+   ![step 1](assets/images/github-use-template-step-- [ ]png)
+- [ ] You will land on the *Create a new repository* page:
+
+      | ![step 2](assets/images/github-use-template-step-2.png) |
+      |:--:|
+      | Choose your `<user-or-institution>` as the owner of the new repository, and give it a name (for instance, we called the new SOPs document *my-sops*. Although it is optional, adding a description is recommended. |
+
+- [ ] Check on the public/private status of the repository - you might not want to have your SOPs public until the study is ready to do so.
+
+    !!! warning "Make sure you choose the appropriate visibility, however you may change it at a later time."
+
+### Step 2: updating contents
+
+!!! info "At this point, you can use Git and GitHub as for any other projects."
+
+- [ ] The documentation will be found under the `docs/` folder.
+- [ ] Although you can edit your SOPs online in your repository, you probably enjoy more flexibility if you install them locally:
+
+    !!! warning "Replace *my-sops* below with the actual name of your repository."
+
+    ```
+    cd $HOME/projects/
+    git clone git@github.com:<user-or-institution>/my-sops.git
+    cd my-sops
+    ```
+
+
+- [ ] Check locally how your new documents will render:
+    - [ ] Install the rendering software (called `mkdocs`) and dependencies by running:
        ```
        pip install -r requirements.txt
        ```
-    1. Run the local web server
+    - [ ] Run the local web server
        ```
        mkdocs serve
        ```
-    1. Open a browser and go to the URL stated by the output of the previous command, which reads like:
+    - [ ] Open a browser and go to the URL stated by the output of the previous command, which reads like:
        ```
-       INFO     -  [08:53:36] Serving on http://127.0.0.1:8000/mriqc-sops/
+       INFO     -  [08:53:36] Serving on http://127.0.0.1:8000/my-sops/
        ```
-1. Now you are ready to revise each of the documents, editing and updating accordingly to your experiments:
-    1. Update the project's name, description, authors, etc. at the head of the `/mkdocs.yml` file.
-    1. Update the project's name and introduction in the `docs/index.md` file.
-    1. Customize everything to fit your needs.
-    1. Commit your changes back to repository:
+- [ ] Now you are ready to revise each of the documents, editing and updating accordingly to your experiments:
+    - [ ] Update the project's name, description, authors, etc. at the head of the `/mkdocs.yml` file.
+    - [ ] Update the project's name and introduction in the `docs/index.md` file.
+    - [ ] Customize everything to fit your needs.
+    - [ ] Commit your changes and push back to repository:
        ```
        git commit -am "Updated the recruitment procedures with a new e-mail template"
+       git push
        ```
+
+## Project settings
+You may want to keep certain settings constant throughout the SOPs, for instance, the length of a specific stimulus in a particular point of the experiment which keeps appearing in the documentation at several spots.
+To maintain documentation-wise information, define these metadata in the `study-settings.yml` file.
+For example:
+``` yaml title="Example of settings file"
+{% include 'examples/study-settings.yml' %}
+```
+
+Given the above settings file, if we want our SOPs to show the name of the project (*My SOPs*), then we will have to use the following replacement code `{{ '{{ settings.general.name }}' }}` wherever the replacement is necessary.
+
+## Protecting sensitive and proprietary information
+
+Some metadata MUST remain private at all times.
+If you want to keep secrets that are inaccessible to others (even after making the SOPs open by changing their visibility), the easiest (and yet secure) way of achieving this is initiating a private repository with a config file for the private metadata.
+
+Finally, uncomment the following line in the `/mkdocs.yml` configuration file:
+
+``` yaml title="Enabling private metadata"
+{% include 'examples/mkdocs-secrets.yml' %}
+```
 
 ## Snapshotting the documentation for archival and dissemination
 
 Whenever you feel ready to make a *snapshot* of the current state of your SOPs and assign them a new *version* label, the repository you cloned has the tooling to do so easily in a single step.
 
-1. Create a release on your GitHub repository.
+- [ ] Create a release on your GitHub repository.
    The creation of the release will trigger an automation (using GitHub Actions).
    This automation will inspect all changes since the last *release* you created and add them to the `docs/changes.md` document, which keeps human-readable track of the evolution of the SOPs.
 

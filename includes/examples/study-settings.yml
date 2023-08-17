@@ -1,0 +1,16 @@
+## Study-wise settings that can be shared publicly
+general:
+  name: "My SOPs"
+  repo: gh_username/my-sops
+
+mri:
+  timings:
+    func_rest: '20min 0s'
+    func_bht: '5min 41s'
+    func_pct: '2min 38s'
+
+psychopy:
+  tasks:
+    func_rest: '`task-rest_bold.psyexp`'
+    func_bht: '`task-bht_bold.psyexp`'
+    func_pct: '`task-pct_bold.psyexp`'
