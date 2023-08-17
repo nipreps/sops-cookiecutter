@@ -1,4 +1,5 @@
 markdown-include
 mkdocs
+mkdocs-macros-plugin
 mkdocs-material
 pygments

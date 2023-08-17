@@ -29,6 +29,12 @@ theme:
 
 plugins:
   - search
+  - macros:
+      include_dir: includes
+      include_yaml:
+        # - secrets: 'secrets/settings.yml'
+        - settings: 'study-settings.yml'
+      on_undefined: lax
 
 markdown_extensions:
   - admonition
