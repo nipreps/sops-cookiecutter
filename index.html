@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-name-standard-operating-procedures" class="md-skip">
+        <a href="#sops-cookiecutter" class="md-skip">
           Skip to content
         </a>
       
@@ -222,8 +222,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-sops-cookiecutter" class="md-nav__link">
+    Why SOPs Cookiecutter?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-sops" class="md-nav__link">
+    Publishing SOPs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-use-this-template" class="md-nav__link">
     How to use this template
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use this template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-derive-your-own-repository-from-the-template" class="md-nav__link">
+    Step 1: derive your own repository from the template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-updating-contents" class="md-nav__link">
+    Step 2: updating contents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-settings" class="md-nav__link">
+    Project settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-and-proprietary-information" class="md-nav__link">
+    Protecting sensitive and proprietary information
   </a>
   
 </li>
@@ -452,8 +500,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-sops-cookiecutter" class="md-nav__link">
+    Why SOPs Cookiecutter?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-sops" class="md-nav__link">
+    Publishing SOPs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-use-this-template" class="md-nav__link">
     How to use this template
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use this template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-derive-your-own-repository-from-the-template" class="md-nav__link">
+    Step 1: derive your own repository from the template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-updating-contents" class="md-nav__link">
+    Step 2: updating contents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-settings" class="md-nav__link">
+    Project settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-sensitive-and-proprietary-information" class="md-nav__link">
+    Protecting sensitive and proprietary information
   </a>
   
 </li>
@@ -480,59 +576,149 @@
                   
 
 
-<h1 id="project-name-standard-operating-procedures">&lt;Project Name&gt;: Standard Operating Procedures<a class="headerlink" href="#project-name-standard-operating-procedures" title="Permanent link">&para;</a></h1>
-<p>Standard Operating Procedures (SOPs) bundle the documentation that describes data collection so that experiments can robustly be repeated.
+<h1 id="sops-cookiecutter"><em>SOPs Cookiecutter</em><a class="headerlink" href="#sops-cookiecutter" title="Permanent link">&para;</a></h1>
+<p>Standard Operating Procedures (SOPs) bundle the documentation that describes the <em>nose-to-tail</em> execution of the experiment (that is, from data collection to final analysis), at an <em>atomic</em> level of detail, so that experiments can robustly be repeated.
 Within your lab or your institution, the goal is that experimenters can carry out new data collection according to the overarching study plans with minimal supervision.
-Beyond the doors of your lab or institution, SOPs are a critical tool to maximize the reproducibility of your research by others.
-Although very hardly other researchers will have access to the exact same settings detailed in your SOPs, they document all the incremental, atomic decisions that together implement your methods.
-Therefore, the SOPs should be released alongside datasets and publications to ensure all the procedural detail of you experiment is preserved with results.</p>
-<div class="admonition info">
-<p class="admonition-title">Checklists</p>
-<p>One powerful tool to leverage in your SOPs is the checklist.
-Checklists are very effective in ensuring all the steps of a procedure are followed to the letter, thereby minimizing the chance of misshapen.</p>
+Beyond the doors of your lab or institution, SOPs are a critical tool to maximize the reproducibility of your research by others.</p>
+<h2 id="why-sops-cookiecutter">Why <em>SOPs Cookiecutter</em>?<a class="headerlink" href="#why-sops-cookiecutter" title="Permanent link">&para;</a></h2>
+<p><em>SOPs Cookiecutter</em> is a boilerplate for SOPs, and it provides a minimally working framework to bootstrap and continue your own SOPs.
+SOPs typically should be a live documentation hub, the idea is that you iteratively build on top of previous versions.
+Because this iterative advance of textual-formatted information is naturally handled by version control systems, we propose Git/GitHub as a convenient way of maintaining and working on this document.
+This also permits many typical operations that implicitly happen with SOPs documents:</p>
+<ul>
+<li><em>forking</em>: someone in an institution created an original SOPs document, which over time got copied over and child documents continued their lives;</li>
+<li><em>branching</em>: one of those SOPs documents was evolved for a particular study that was almost like the original project, except for minimal differences;</li>
+<li><em>merging</em>: a branch became important enough to become a constituent part of the original SOPs from which it derived; and</li>
+<li><em>versioning</em>: it is critical to keep track of all changes in the SOPs, and even more important to take <em>snapshots</em> of the document at relevant milestones of its life cycle (e.g., <em>version - [ ]0</em>).</li>
+</ul>
+<p>All of these operations are naturally part of Git.</p>
+<h2 id="publishing-sops">Publishing SOPs<a class="headerlink" href="#publishing-sops" title="Permanent link">&para;</a></h2>
+<p>Although very hardly other researchers will have access to the exact same settings detailed in your SOPs, they document all the incremental decisions that together implement your methods.
+Therefore, making your SOPs accessible alongside datasets and publications is an effective way of maximizing the transparency of your research.
+Indeed, opening your SOPs will ensure all procedural details of you experiment are preserved with the results.</p>
+<div class="admonition danger">
+<p class="admonition-title">SOPs generated from <em>SOPs Cookiecutter</em> CAN BE PRIVATE</p>
+<p><em>SOPs Cookiecutter</em> does not enforce the public release of your SOPs.
+ Leveraging the authorization system and access permissions of Git, you have full control over who can access your SOPs.
+ Indeed, most projects cannot share their SOPs open until the study has been concluded for a number of reasons.</p>
+<p>If you are using <em>SOPs Cookiecutter</em> with GitHub, you only need to make sure you generate your new SOPs in <strong>private</strong> mode or change it to private after creation (see below).</p>
 </div>
-<p>This template is intended to provide an outline to bootstrap your own SOPs.
-As SOPs are a live documentation hub, the idea is that you iteratively build on top of previous versions.
-Because this iterative advance of textual-formatted information is naturally handled by version control systems, we propose Git/GitHub as a convenient way of maintaining and working on this document.</p>
 <h2 id="how-to-use-this-template">How to use this template<a class="headerlink" href="#how-to-use-this-template" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Click on the "Use this template" button in the home page of nipreps/mriqc-sops. This will redirect you to the interface to to create a new repository. </li>
-<li>Choose your <user-or-institution> as the owner of the new repository and rename it with your <sops-repo-name>. (replace in the following, please replace <code>&lt;user-or-institution&gt;</code> with the actual name of your or your organization's GitHub account and <code>&lt;sops-repo-name&gt;</code> with the repository name).</li>
-<li>Check on the public/private status of the repository - you might not want to have your SOPs public until the study is ready to do so.</li>
-<li>The documentation will be found under the <code>docs/</code> folder.</li>
-<li>Although you can edit your SOPs online in your repository, you probably enjoy more flexibility if you install them locally:
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd $HOME/projects/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git clone git@github.com:&lt;user-or-institution&gt;/&lt;sops-repo-name&gt;.git
-</span></code></pre></div></li>
-<li>Check locally how your new documents will render:<ol>
-<li>Install the rendering software (called <code>mkdocs</code>) and dependencies by running:
+<h3 id="step-1-derive-your-own-repository-from-the-template">Step 1: derive your own repository from the template<a class="headerlink" href="#step-1-derive-your-own-repository-from-the-template" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">SOPs <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> checklists</p>
+<p>Checklists are very effective in ensuring all the steps of a procedure are followed to the letter, thereby minimizing the chance of misshapen.</p>
+</div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Click on the "Use this template" button in the home page of <a href="https://github.com/nipreps/sops-cookiecutter"><code>nipreps/sops-cookiecutter</code></a>.
+   Alternatively, you can use <a href="https://github.com/new?template_name=sops-cookiecutter&amp;template_owner=nipreps">this link</a>.
+   This will redirect you to the interface to create a new repository:
+   <img alt="step 1" src="assets/images/github-use-template-step-- [ ]png" /></li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You will land on the <em>Create a new repository</em> page:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="step 2" src="assets/images/github-use-template-step-2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Choose your <code>&lt;user-or-institution&gt;</code> as the owner of the new repository, and give it a name (for instance, we called the new SOPs document <em>my-sops</em>. Although it is optional, adding a description is recommended.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check on the public/private status of the repository - you might not want to have your SOPs public until the study is ready to do so.</p>
+<div class="admonition warning">
+<p class="admonition-title">Make sure you choose the appropriate visibility, however you may change it at a later time.</p>
+</div>
+</li>
+</ul>
+<h3 id="step-2-updating-contents">Step 2: updating contents<a class="headerlink" href="#step-2-updating-contents" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">At this point, you can use Git and GitHub as for any other projects.</p>
+</div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The documentation will be found under the <code>docs/</code> folder.</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Although you can edit your SOPs online in your repository, you probably enjoy more flexibility if you install them locally:</p>
+<div class="admonition warning">
+<p class="admonition-title">Replace <em>my-sops</em> below with the actual name of your repository.</p>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd $HOME/projects/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git clone git@github.com:&lt;user-or-institution&gt;/my-sops.git
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>cd my-sops
+</span></code></pre></div>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check locally how your new documents will render:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Install the rendering software (called <code>mkdocs</code>) and dependencies by running:
    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip install -r requirements.txt
 </span></code></pre></div></li>
-<li>Run the local web server
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Run the local web server
    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs serve
 </span></code></pre></div></li>
-<li>Open a browser and go to the URL stated by the output of the previous command, which reads like:
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>INFO     -  [08:53:36] Serving on http://127.0.0.1:8000/mriqc-sops/
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Open a browser and go to the URL stated by the output of the previous command, which reads like:
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>INFO     -  [08:53:36] Serving on http://127.0.0.1:8000/my-sops/
 </span></code></pre></div></li>
-</ol>
+</ul>
 </li>
-<li>Now you are ready to revise each of the documents, editing and updating accordingly to your experiments:<ol>
-<li>Update the project's name, description, authors, etc. at the head of the <code>/mkdocs.yml</code> file.</li>
-<li>Update the project's name and introduction in the <code>docs/index.md</code> file.</li>
-<li>Customize everything to fit your needs.</li>
-<li>Commit your changes back to repository:
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Now you are ready to revise each of the documents, editing and updating accordingly to your experiments:<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Update the project's name, description, authors, etc. at the head of the <code>/mkdocs.yml</code> file.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Update the project's name and introduction in the <code>docs/index.md</code> file.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Customize everything to fit your needs.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Commit your changes and push back to repository:
    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git commit -am &quot;Updated the recruitment procedures with a new e-mail template&quot;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git push
 </span></code></pre></div></li>
-</ol>
+</ul>
 </li>
-</ol>
+</ul>
+<h2 id="project-settings">Project settings<a class="headerlink" href="#project-settings" title="Permanent link">&para;</a></h2>
+<p>You may want to keep certain settings constant throughout the SOPs, for instance, the length of a specific stimulus in a particular point of the experiment which keeps appearing in the documentation at several spots.
+To maintain documentation-wise information, define these metadata in the <code>study-settings.yml</code> file.
+For example:
+<div class="language-yaml highlight"><span class="filename">Example of settings file</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">## Study-wise settings that can be shared publicly</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">general</span><span class="p">:</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;My</span><span class="nv"> </span><span class="s">SOPs&quot;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gh_username/my-sops</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nt">mri</span><span class="p">:</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="nt">timings</span><span class="p">:</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="nt">func_rest</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;20min</span><span class="nv"> </span><span class="s">0s&#39;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="nt">func_bht</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;5min</span><span class="nv"> </span><span class="s">41s&#39;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nt">func_pct</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2min</span><span class="nv"> </span><span class="s">38s&#39;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nt">psychopy</span><span class="p">:</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="nt">func_rest</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;`task-rest_bold.psyexp`&#39;</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="nt">func_bht</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;`task-bht_bold.psyexp`&#39;</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="nt">func_pct</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;`task-pct_bold.psyexp`&#39;</span>
+</span></code></pre></div></p>
+<p>Given the above settings file, if we want our SOPs to show the name of the project (<em>My SOPs</em>), then we will have to use the following replacement code <code>{{ settings.general.name }}</code> wherever the replacement is necessary.</p>
+<h2 id="protecting-sensitive-and-proprietary-information">Protecting sensitive and proprietary information<a class="headerlink" href="#protecting-sensitive-and-proprietary-information" title="Permanent link">&para;</a></h2>
+<p>Some metadata MUST remain private at all times.
+If you want to keep secrets that are inaccessible to others (even after making the SOPs open by changing their visibility), the easiest (and yet secure) way of achieving this is initiating a private repository with a config file for the private metadata.</p>
+<p>Finally, uncomment the following line in the <code>/mkdocs.yml</code> configuration file:</p>
+<div class="language-yaml highlight"><span class="filename">Enabling private metadata</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">macros</span><span class="p">:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">      </span><span class="nt">include_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">includes</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="nt">include_yaml</span><span class="p">:</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="c1"># - secrets: &#39;secrets/settings.yml&#39;</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">settings</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;study-settings.yml&#39;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">      </span><span class="nt">on_undefined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lax</span>
+</span></code></pre></div>
 <h2 id="snapshotting-the-documentation-for-archival-and-dissemination">Snapshotting the documentation for archival and dissemination<a class="headerlink" href="#snapshotting-the-documentation-for-archival-and-dissemination" title="Permanent link">&para;</a></h2>
 <p>Whenever you feel ready to make a <em>snapshot</em> of the current state of your SOPs and assign them a new <em>version</em> label, the repository you cloned has the tooling to do so easily in a single step.</p>
-<ol>
-<li>Create a release on your GitHub repository.
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a release on your GitHub repository.
    The creation of the release will trigger an automation (using GitHub Actions).
    This automation will inspect all changes since the last <em>release</em> you created and add them to the <code>docs/changes.md</code> document, which keeps human-readable track of the evolution of the SOPs.</li>
-</ol>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Choosing appropriate version numbers</p>
 <p>We recommend to use the <a href="https://calver.org">Calendar Versioning (CalVer) system</a> for your SOPs.
