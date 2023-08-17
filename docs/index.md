@@ -118,7 +118,7 @@ If you want to keep secrets that are inaccessible to others (even after making t
 ```
 
 - [ ] Copy the URL of the new repository.
-    This will, typically, take a form like `https://github.com/gh_handle/my-sops-secrets.git`, where `gh_handle` is a GitHub username and `my-sops-secrets` is the name of the repository you set when you started the secrets repositorty.
+    This will, typically, take a form like `https://github.com/gh_handle/my-sops-secrets.git`, where `gh_handle` is a GitHub username and `my-sops-secrets` is the name of the repository you set when you started the secrets repository.
     With the URL, please [add a git submodule](https://github.blog/2016-02-01-working-with-submodules/) to the repo:
 
     ``` bash title="Make sure your URL is followed by the word 'secrets'"
