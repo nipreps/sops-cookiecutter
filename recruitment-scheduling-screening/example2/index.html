@@ -1,789 +1,680 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <meta content="Templates and bootstrapping documentation for MRI standard operating procedures (SOPs)" name="description"/>
-  <meta content="The NiPreps developers" name="author"/>
-  <link href="https://nipreps.org/mriqc-sops/recruitment-scheduling-screening/example2/" rel="canonical"/>
-  <link href="../../assets/images/favicon.png" rel="icon"/>
-  <meta content="mkdocs-1.2.3, mkdocs-material-8.2.1" name="generator"/>
-  <title>
-   Example 2 - MRIQC :: SOPs
-  </title>
-  <link href="../../assets/stylesheets/main.e8d9bf0c.min.css" rel="stylesheet"/>
-  <link href="../../assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
-  <style>
-   :root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}
-  </style>
-  <link href="../../stylesheets/extra.css" rel="stylesheet"/>
-  <script>
-   __md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}
-  </script>
- </head>
- <body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
-  <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-  <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-  <label class="md-overlay" for="__drawer">
-  </label>
-  <div data-md-component="skip">
-   <a class="md-skip" href="#example-2-recruitment-pool">
-    Skip to content
-   </a>
-  </div>
-  <div data-md-component="announce">
-  </div>
-  <header class="md-header" data-md-component="header">
-   <nav aria-label="Header" class="md-header__inner md-grid">
-    <a aria-label="MRIQC :: SOPs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="MRIQC :: SOPs">
-     <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z">
-      </path>
-     </svg>
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Templates and bootstrapping documentation for standard operating procedures (SOPs)">
+      
+      
+        <meta name="author" content="The NiPreps developers">
+      
+      
+        <link rel="canonical" href="https://www.nipreps.org/sops-cookiecutter/recruitment-scheduling-screening/example2/">
+      
+      
+        <link rel="prev" href="../example1/">
+      
+      
+        <link rel="next" href="../../data-collection/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Example 2 - SOPs template (cookiecutter)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#example-2-recruitment-pool" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SOPs template (cookiecutter)" class="md-header__button md-logo" aria-label="SOPs template (cookiecutter)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-     <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z">
-      </path>
-     </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
-     <div class="md-header__ellipsis">
-      <div class="md-header__topic">
-       <span class="md-ellipsis">
-        MRIQC :: SOPs
-       </span>
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SOPs template (cookiecutter)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Example 2
+            
+          </span>
+        </div>
       </div>
-      <div class="md-header__topic" data-md-component="header-topic">
-       <span class="md-ellipsis">
-        Example 2
-       </span>
-      </div>
-     </div>
     </div>
-   </nav>
-  </header>
-  <div class="md-container" data-md-component="container">
-   <main class="md-main" data-md-component="main">
-    <div class="md-main__inner md-grid">
-     <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-       <div class="md-sidebar__inner">
-        <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
-         <label class="md-nav__title" for="__drawer">
-          <a aria-label="MRIQC :: SOPs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="MRIQC :: SOPs">
-           <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z">
-            </path>
-           </svg>
-          </a>
-          MRIQC :: SOPs
-         </label>
-         <ul class="md-nav__list" data-md-scrollfix="">
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="../..">
-            Home
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="../../changes/">
-            Change History
-           </a>
-          </li>
-          <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-           <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-           <label class="md-nav__link" for="__nav_3">
-            Recruitment, Scheduling, and Screening
-            <span class="md-nav__icon md-icon">
-            </span>
-           </label>
-           <nav aria-label="Recruitment, Scheduling, and Screening" class="md-nav" data-md-level="1">
-            <label class="md-nav__title" for="__nav_3">
-             <span class="md-nav__icon md-icon">
-             </span>
-             Recruitment, Scheduling, and Screening
-            </label>
-            <ul class="md-nav__list" data-md-scrollfix="">
-             <li class="md-nav__item">
-              <a class="md-nav__link" href="../">
-               Introduction
-              </a>
-             </li>
-             <li class="md-nav__item">
-              <a class="md-nav__link" href="../example1/">
-               Example 1
-              </a>
-             </li>
-             <li class="md-nav__item md-nav__item--active">
-              <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-              <label class="md-nav__link md-nav__link--active" for="__toc">
-               Example 2
-               <span class="md-nav__icon md-icon">
-               </span>
-              </label>
-              <a class="md-nav__link md-nav__link--active" href="./">
-               Example 2
-              </a>
-              <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-               <label class="md-nav__title" for="__toc">
-                <span class="md-nav__icon md-icon">
-                </span>
-                Table of contents
-               </label>
-               <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-                <li class="md-nav__item">
-                 <a class="md-nav__link" href="#recruitment">
-                  Recruitment
-                 </a>
-                </li>
-                <li class="md-nav__item">
-                 <a class="md-nav__link" href="#screening">
-                  Screening
-                 </a>
-                </li>
-                <li class="md-nav__item">
-                 <a class="md-nav__link" href="#scheduling">
-                  Scheduling
-                 </a>
-                </li>
-               </ul>
-              </nav>
-             </li>
-            </ul>
-           </nav>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="../../data-collection/">
-            Data collection
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="../../data-storage/">
-            Data storage
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="../../post-session/">
-            After the session
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="../../qa-qc/">
-            Quality Assessment and Control
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="../../preprocessing/">
-            Preprocessing
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="../../release/">
-            Release of data
-           </a>
-          </li>
-         </ul>
-        </nav>
-       </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
       </div>
-     </div>
-     <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-      <div class="md-sidebar__scrollwrap">
-       <div class="md-sidebar__inner">
-        <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-         <label class="md-nav__title" for="__toc">
-          <span class="md-nav__icon md-icon">
-          </span>
-          Table of contents
-         </label>
-         <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="#recruitment">
-            Recruitment
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="#screening">
-            Screening
-           </a>
-          </li>
-          <li class="md-nav__item">
-           <a class="md-nav__link" href="#scheduling">
-            Scheduling
-           </a>
-          </li>
-         </ul>
-        </nav>
-       </div>
-      </div>
-     </div>
-     <div class="md-content" data-md-component="content">
-      <article class="md-content__inner md-typeset">
-       <h1 id="example-2-recruitment-pool">
-        Example 2: Recruitment pool
-        <a class="headerlink" href="#example-2-recruitment-pool" title="Permanent link">
-         ¶
-        </a>
-       </h1>
-       <p>
-        <em>
-         (
-         <a href="https://mfr.osf.io/render?url=https://osf.io/6r9f8/?direct%26mode=render%26action=download%26mode=render">
-          Example adapted from the DMCC Project
-         </a>
-         )
-        </em>
-       </p>
-       <h3 id="recruitment">
-        Recruitment
-        <a class="headerlink" href="#recruitment" title="Permanent link">
-         ¶
-        </a>
-       </h3>
-       <p>
-        Notes about recruitment pools: We currently have access to several different recruitment pools, and were released participants at approximately 3 different time points (6 clustering together).
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SOPs template (cookiecutter)" class="md-nav__button md-logo" aria-label="SOPs template (cookiecutter)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SOPs template (cookiecutter)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changes/" class="md-nav__link">
+        Change History
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Recruitment, Scheduling, and Screening
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Recruitment, Scheduling, and Screening
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example1/" class="md-nav__link">
+        Example 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Example 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Example 2
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recruitment" class="md-nav__link">
+    Recruitment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screening" class="md-nav__link">
+    Screening
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling" class="md-nav__link">
+    Scheduling
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-collection/" class="md-nav__link">
+        Data collection
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-storage/" class="md-nav__link">
+        Data storage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../post-session/" class="md-nav__link">
+        After the session
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qa-qc/" class="md-nav__link">
+        Quality Assessment and Control
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../preprocessing/" class="md-nav__link">
+        Preprocessing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release/" class="md-nav__link">
+        Release of data
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recruitment" class="md-nav__link">
+    Recruitment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screening" class="md-nav__link">
+    Screening
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling" class="md-nav__link">
+    Scheduling
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="example-2-recruitment-pool">Example 2: Recruitment pool<a class="headerlink" href="#example-2-recruitment-pool" title="Permanent link">&para;</a></h1>
+<p><em>(<a href="https://mfr.osf.io/render?url=https://osf.io/6r9f8/?direct%26mode=render%26action=download%26mode=render">Example adapted from the DMCC Project</a>)</em></p>
+<h3 id="recruitment">Recruitment<a class="headerlink" href="#recruitment" title="Permanent link">&para;</a></h3>
+<p>Notes about recruitment pools: We currently have access to several different recruitment pools, and were released participants at approximately 3 different time points (6 clustering together).
 Participants released to us through STRATA expire every 6 months, so in order to have continued access to these participants, we must renew them about a 
-month before they expire.
-       </p>
-       <ul class="task-list">
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox">
-           <span class="task-list-indicator">
-           </span>
-          </input>
-         </label>
-         To contact participants, log in to STRATA tracking by logging into the medical school VPN (use cisco anyconnect app and type “msvpn.wusm.wustl.edu” as the address), proceeding with username and password to access the VPN
-         <ul class="task-list">
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox">
-             <span class="task-list-indicator">
-             </span>
-            </input>
-           </label>
-           Navigate on chrome to “strata.wustl.edu” and follow the link on the homepage to the tracking system
-          </li>
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox">
-             <span class="task-list-indicator">
-             </span>
-            </input>
-           </label>
-           Log in using STRATA username and password
-          </li>
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox">
-             <span class="task-list-indicator">
-             </span>
-            </input>
-           </label>
-           Choose “DMCC2” when prompted to choose a study (FOR BOTH DMCC2 and 3)
-          </li>
-         </ul>
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Search for participant in database either by name or MFR ID (which is listed in the recruitment spreadsheet from Box that should be open on your 
-desktop) and once participant is located, select by clicking “view subject” while name is highlighted to navigate to subject page
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Look under the “Phones” section to find the best calling number.
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Call the number listed on the lab telephone (dial 9 before the number to make external calls [numbers with 314 area code], dial 91 before the number to make long distance calls) to get a hold of the subject.
-         <ul class="task-list">
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox"/>
-            <span class="task-list-indicator">
-            </span>
-           </label>
-           Use the DMCC phone script (found in myIRB, within DMCC3 IRB's attachments) to conduct the screening procedure.
-          </li>
-         </ul>
-        </li>
-       </ul>
-       <h3 id="screening">
-        Screening
-        <a class="headerlink" href="#screening" title="Permanent link">
-         ¶
-        </a>
-       </h3>
-       <p>
-        Within the call, follow the screening procedure:
-       </p>
-       <ul class="task-list">
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Print and label
-         <a href="https://osf.io/6efv8/?show=view">
-          phone script
-         </a>
-         with participant's MFR ID and record participant responses to questions on script.
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Make sure that the participant's questions about the study are all addressed and answered.
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         If participant consents to the phone screen, conduct it and mark the results (screener date, if responded “yes” to any medical questions, whether or not passed screener) in the appropriate columns of the recruitment spreadsheet.
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Make sure to address any “yes” responses to medical questions by following up with the questions provided at the back of the screener.
-         <ul class="task-list">
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox"/>
-            <span class="task-list-indicator">
-            </span>
-           </label>
-           For HCP participants, also ask if their condition has changed since the HCP scans.
-          </li>
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox"/>
-            <span class="task-list-indicator">
-            </span>
-           </label>
-           For new participants, ask about past MRI experience and any changes medically since then.
-          </li>
-         </ul>
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Make sure to ask about MBSR availability and commitment. In order for both MZ twins to be enrolled in test-retest w/ MBSR, we will need the twin counterbalanced for the MBSR intervention to commit to the time demands of an MBSR class at some point in the future (without divulging which group they are sorted into).
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         If the candidate participant does not pass the phone screen, then end the interview, informing them that they do not meet our inclusion criteria, and mark the screen fail in the recruitment spreadsheet.
-         <ul class="task-list">
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox"/>
-            <span class="task-list-indicator">
-            </span>
-           </label>
-           If an MZ non-HCP twin, this excludes their twin too.
-          </li>
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox"/>
-            <span class="task-list-indicator">
-            </span>
-           </label>
-           If an MZ HCP twin, can still run as an individual if one twin fails.
-          </li>
-         </ul>
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         If participant does pass the phone screen, mark the results in the recruitment spreadsheet and attempt to schedule a time for the participant to come in and complete the study (continue with the next subsection).
-        </li>
-       </ul>
-       <h3 id="scheduling">
-        Scheduling
-        <a class="headerlink" href="#scheduling" title="Permanent link">
-         ¶
-        </a>
-       </h3>
-       <ul class="task-list">
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         To schedule the participant, coordinate with p to find a time that works with their schedule that also is reserved for the Braver lab on the Prisma calendar.
-         <ul class="task-list">
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox"/>
-            <span class="task-list-indicator">
-            </span>
-           </label>
-           To see which times are reserved for the Braver lab on the Prisma, check the Google Calendar “DMCC HCP Scanning”.
-          </li>
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox"/>
-            <span class="task-list-indicator">
-            </span>
-           </label>
-           The slots that are available will say “unfilled scan slot”.
-          </li>
-         </ul>
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Once a mutually agreeable three or four-session time slot is agreed upon (the first session is 5 hours, the second is 3.5 hours and the third is 3.5 hours- with behavioral session, behavioral session is 2 hours, session 1 is 3.5 hours, 2 is 3.5 hours, and 3 is 3.5 hours), record the date for later purposes and ask if p has an email address to which you can send p further materials about the session.
-         <ul class="task-list">
-          <li class="task-list-item">
-           <label class="task-list-control">
-            <input checked="" type="checkbox"/>
-            <span class="task-list-indicator">
-            </span>
-           </label>
-           If yes, record and add to p's subject page in STRATA. If not, gather participant's mailing address or establish some other alternative way to contact p with the important address and driving information for the appointment.
-          </li>
-         </ul>
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Try to schedule sessions all within one week of each other, if possible.
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Before ending the call, ensure that the participant has a phone number to contact in case they need to call back with questions or concerns.
-        </li>
-       </ul>
-       <p>
-        Once the call is concluded:
-       </p>
-       <ul class="task-list">
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Record the results of the phone contact in STRATA by copying the number used to contact p (even if p was not reached or a voicemail was left instead of successful contact) and press “new” under the Contacts section of the participant page, pasting the number in the body of the note and indicating whether or not p was reached and the outcome of the phone call, marking the relevant tracking code.
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Also record contact type, date, general overview, and initials in the appropriate recruitment spreadsheet. Example note by KN:
-         <div class="highlight">
-          <pre><span></span><code>2/14/19 called but participant said to call back in 6 months-KN
-</code></pre>
-         </div>
-        </li>
-        <li class="task-list-item">
-         <p>
-          <label class="task-list-control">
-           <input checked="" type="checkbox"/>
-           <span class="task-list-indicator">
-           </span>
-          </label>
-          Send an email to the participant (
-          <strong>
-           with copy to all RAs running the session
-          </strong>
-          ) providing more information about the session.
-      As for all email communication with participants, use the
-          <code>
-           ***********@gmail.com
-          </code>
-          account.
-         </p>
-         <blockquote>
-          <p>
-           Hello ~enter participant name~,
-          </p>
-          <p>
-           Thanks so much for taking the time to talk with me today.
-We are so excited that you'll be able to participate in our study on &lt;enter the days of sessions (e.g. Wednesday 1/1, Friday 1/3, and Saturday 1/4)&gt;.
-          </p>
-          <p>
-           Here is some more information about your sessions.
-          </p>
-          <p>
-           Your appointments will take place over three to four sessions:
-          </p>
-          <ol>
-           <li>
-            <p>
-             ~enter day of week, calendar date, and time frame of session 1 (scanning or  behavioral)~ (e.g. Wednesday, January 1 st , from 6:00pm until about 8:00pm)
-            </p>
-           </li>
-           <li>
-            <p>
-             ~enter day of week, calendar date, and time frame of session 2~
-            </p>
-           </li>
-           <li>
-            <p>
-             ~enter day of week, calendar date, and time frame of session 3~
-            </p>
-           </li>
-           <li>
-            <p>
-             ~enter day of week, calendar date, and time frame of session 4 (if behavioral)~
-            </p>
-           </li>
-          </ol>
-          <p>
-           For all of these appointments, please meet us in the main waiting area of the East Imaging Building on University of Los Angeles' Medical School campus.
-The address of this building is
-           <strong>
-            251 N Bristol Ave, Los Angeles
-           </strong>
-           ,
-           <strong>
-            CA 90049
-           </strong>
-           .
-          </p>
-          <p>
-           There is a parking lot directly across the street from the entrance to the building, in which there are spots marked with red and white signs that say "
-           <em>
-            For Research Participants Only
-           </em>
-           ."
-           <strong>
-            Please, park in one of those designated spots
-           </strong>
-           , and when you come inside, we will give you an authorizing permit to place on your dashboard.
-          </p>
-          <p>
-           You do not have to bring anything in particular to your sessions.
+month before they expire.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> To contact participants, log in to STRATA tracking by logging into the medical school VPN (use cisco anyconnect app and type “msvpn.wusm.wustl.edu” as the address), proceeding with username and password to access the VPN<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Navigate on chrome to “strata.wustl.edu” and follow the link on the homepage to the tracking system</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Log in using STRATA username and password</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Choose “DMCC2” when prompted to choose a study (FOR BOTH DMCC2 and 3)</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Search for participant in database either by name or MFR ID (which is listed in the recruitment spreadsheet from Box that should be open on your 
+desktop) and once participant is located, select by clicking “view subject” while name is highlighted to navigate to subject page</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Look under the “Phones” section to find the best calling number.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Call the number listed on the lab telephone (dial 9 before the number to make external calls [numbers with 314 area code], dial 91 before the number to make long distance calls) to get a hold of the subject.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Use the DMCC phone script (found in myIRB, within DMCC3 IRB's attachments) to conduct the screening procedure.</li>
+</ul>
+</li>
+</ul>
+<h3 id="screening">Screening<a class="headerlink" href="#screening" title="Permanent link">&para;</a></h3>
+<p>Within the call, follow the screening procedure:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Print and label <a href="https://osf.io/6efv8/?show=view">phone script</a> with participant's MFR ID and record participant responses to questions on script.  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Make sure that the participant's questions about the study are all addressed and answered.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> If participant consents to the phone screen, conduct it and mark the results (screener date, if responded “yes” to any medical questions, whether or not passed screener) in the appropriate columns of the recruitment spreadsheet.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Make sure to address any “yes” responses to medical questions by following up with the questions provided at the back of the screener.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> For HCP participants, also ask if their condition has changed since the HCP scans.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> For new participants, ask about past MRI experience and any changes medically since then.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Make sure to ask about MBSR availability and commitment. In order for both MZ twins to be enrolled in test-retest w/ MBSR, we will need the twin counterbalanced for the MBSR intervention to commit to the time demands of an MBSR class at some point in the future (without divulging which group they are sorted into).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> If the candidate participant does not pass the phone screen, then end the interview, informing them that they do not meet our inclusion criteria, and mark the screen fail in the recruitment spreadsheet.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> If an MZ non-HCP twin, this excludes their twin too.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> If an MZ HCP twin, can still run as an individual if one twin fails.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> If participant does pass the phone screen, mark the results in the recruitment spreadsheet and attempt to schedule a time for the participant to come in and complete the study (continue with the next subsection).</li>
+</ul>
+<h3 id="scheduling">Scheduling<a class="headerlink" href="#scheduling" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> To schedule the participant, coordinate with p to find a time that works with their schedule that also is reserved for the Braver lab on the Prisma calendar.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> To see which times are reserved for the Braver lab on the Prisma, check the Google Calendar “DMCC HCP Scanning”.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> The slots that are available will say “unfilled scan slot”.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Once a mutually agreeable three or four-session time slot is agreed upon (the first session is 5 hours, the second is 3.5 hours and the third is 3.5 hours- with behavioral session, behavioral session is 2 hours, session 1 is 3.5 hours, 2 is 3.5 hours, and 3 is 3.5 hours), record the date for later purposes and ask if p has an email address to which you can send p further materials about the session.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> If yes, record and add to p's subject page in STRATA. If not, gather participant's mailing address or establish some other alternative way to contact p with the important address and driving information for the appointment.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Try to schedule sessions all within one week of each other, if possible.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Before ending the call, ensure that the participant has a phone number to contact in case they need to call back with questions or concerns.</li>
+</ul>
+<p>Once the call is concluded:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Record the results of the phone contact in STRATA by copying the number used to contact p (even if p was not reached or a voicemail was left instead of successful contact) and press “new” under the Contacts section of the participant page, pasting the number in the body of the note and indicating whether or not p was reached and the outcome of the phone call, marking the relevant tracking code.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Also record contact type, date, general overview, and initials in the appropriate recruitment spreadsheet. Example note by KN:
+      <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2/14/19 called but participant said to call back in 6 months-KN
+</span></code></pre></div></li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Send an email to the participant (<strong>with copy to all RAs running the session</strong>) providing more information about the session.
+      As for all email communication with participants, use the <code>***********@gmail.com</code> account.</p>
+<blockquote>
+<p>Hello ~enter participant name~,</p>
+<p>Thanks so much for taking the time to talk with me today.
+We are so excited that you'll be able to participate in our study on &lt;enter the days of sessions (e.g. Wednesday 1/1, Friday 1/3, and Saturday 1/4)&gt;.</p>
+<p>Here is some more information about your sessions.</p>
+<p>Your appointments will take place over three to four sessions:</p>
+<ol>
+<li>
+<p>~enter day of week, calendar date, and time frame of session 1 (scanning or  behavioral)~ (e.g. Wednesday, January 1 st , from 6:00pm until about 8:00pm)</p>
+</li>
+<li>
+<p>~enter day of week, calendar date, and time frame of session 2~</p>
+</li>
+<li>
+<p>~enter day of week, calendar date, and time frame of session 3~</p>
+</li>
+<li>
+<p>~enter day of week, calendar date, and time frame of session 4 (if behavioral)~</p>
+</li>
+</ol>
+<p>For all of these appointments, please meet us in the main waiting area of the East Imaging Building on University of Los Angeles' Medical School campus.
+The address of this building is <strong>251 N Bristol Ave, Los Angeles</strong>, <strong>CA 90049</strong>.</p>
+<p>There is a parking lot directly across the street from the entrance to the building, in which there are spots marked with red and white signs that say "<em>For Research Participants Only</em>."
+<strong>Please, park in one of those designated spots</strong>, and when you come inside, we will give you an authorizing permit to place on your dashboard.</p>
+<p>You do not have to bring anything in particular to your sessions.
 Due to changing MRI facility policies, we are now asking participants to change into scrubs before entering the scanner.
 We will ask you to remove your underwear if they are not 100% cotton.
 Please do not wear nail polish or heavy eye makeup to your sessions.
-We  have snacks available, but if you prefer a full meal please feel free to bring one along.
-          </p>
-          <p>
-           During your visits, you'll be doing computerized tasks both while inside and outside of the MRI scanner, filling out some questionnaires, and providing saliva samples.
-          </p>
-          <p>
-           If you have any questions before your appointment, feel free to email me here to ask them, or call me at the office at (###) ###-####.
-          </p>
-          <p>
-           If you have trouble finding us on the day of your appointment, you can call me (or my colleague) at ~enter first scanner's cell phone number: (Alex: ###-###-####, Mike: ###-###-####, Shelly: ###-###-####)~.
-          </p>
-          <p>
-           Thanks again for your interest in participating.
-          </p>
-          <p>
-           Have a great day!
-          </p>
-          <p>
-           Best,
-          </p>
-          <p>
-           ~enter your name~
-          </p>
-         </blockquote>
-        </li>
-        <li class="task-list-item">
-         <p>
-          <label class="task-list-control">
-           <input checked="" type="checkbox"/>
-           <span class="task-list-indicator">
-           </span>
-          </label>
-          Ensure that time slot of session appointments are reserved for the Braver Lab both on the Bay 3 outlook calendar (Bay 3 Prisma from directory)
-by emailing
-          <code>
-           *****@npg.wustl.edu
-          </code>
-          (Bay 3 Users) and
-          <code>
-           *****@npg.wustl.edu
-          </code>
-          (NIL Scheduling) with requested times, indicating that the protocol is NP# 1025 or 1095 (DMCC2 and 3, respectively), and reserve parking space.
-         </p>
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Create a session on the Google calendar on the “DMCC HCP Scanning” calendar that lists the two responsible RAs (email them if necessary, to inform them of these appointments) and dates and times of the sessions, along with the participant ID and session number.
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Introduce the new appointments into the STRATA scheduling system
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Log in to STRATA as indicated above (remember to choose “DMCC2” when prompted)
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Make yourself or another RA available as a resource during the time during which the appointment will be scheduled by choosing ‘update availability’ and following prompts. Mark your availability from 7:00am until 11:45pm and set to repeat for the next 8 weeks).
-         <em>
-          It does not matter which RAs are marked as available- this is just a formality
-         </em>
-        </li>
-        <li class="task-list-item">
-         <label class="task-list-control">
-          <input checked="" type="checkbox"/>
-          <span class="task-list-indicator">
-          </span>
-         </label>
-         Click anywhere on the calendar to create an event, and fill in the pop-up window with the following details:
-         <ul>
-          <li>
-           MFR group ID (without
-           <code>
-            :001
-           </code>
-           or
-           <code>
-            :002
-           </code>
-           ) of subject,
-           <code>
-            001=mark PROBAND
-           </code>
-           for relationship,
-           <code>
-            002=mark TWIN
-           </code>
-           for relationship
-          </li>
-          <li>
-           For session 1, mark as “baseline session”, and for session 2 and 3, mark as “follow-up session”.
-  Mark the behavioral session as a baseline session if the participant has a behavioral session.
-          </li>
-          <li>
-           Time appointment starts and ends
-          </li>
-          <li>
-           Mark “N” for Contact Resource
-          </li>
-         </ul>
-        </li>
-       </ul>
-      </article>
-     </div>
-    </div>
-   </main>
-   <footer class="md-footer">
-    <nav aria-label="Footer" class="md-footer__inner md-grid">
-     <a aria-label="Previous: Example 1" class="md-footer__link md-footer__link--prev" href="../example1/" rel="prev">
-      <div class="md-footer__button md-icon">
-       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z">
-        </path>
-       </svg>
-      </div>
-      <div class="md-footer__title">
-       <div class="md-ellipsis">
-        <span class="md-footer__direction">
-         Previous
-        </span>
-        Example 1
-       </div>
-      </div>
-     </a>
-     <a aria-label="Next: Data collection" class="md-footer__link md-footer__link--next" href="../../data-collection/" rel="next">
-      <div class="md-footer__title">
-       <div class="md-ellipsis">
-        <span class="md-footer__direction">
-         Next
-        </span>
-        Data collection
-       </div>
-      </div>
-      <div class="md-footer__button md-icon">
-       <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z">
-        </path>
-       </svg>
-      </div>
-     </a>
-    </nav>
-    <div class="md-footer-meta md-typeset">
-     <div class="md-footer-meta__inner md-grid">
+We  have snacks available, but if you prefer a full meal please feel free to bring one along.</p>
+<p>During your visits, you'll be doing computerized tasks both while inside and outside of the MRI scanner, filling out some questionnaires, and providing saliva samples.</p>
+<p>If you have any questions before your appointment, feel free to email me here to ask them, or call me at the office at (###) ###-####.</p>
+<p>If you have trouble finding us on the day of your appointment, you can call me (or my colleague) at ~enter first scanner's cell phone number: (Alex: ###-###-####, Mike: ###-###-####, Shelly: ###-###-####)~.</p>
+<p>Thanks again for your interest in participating.</p>
+<p>Have a great day!</p>
+<p>Best,</p>
+<p>~enter your name~</p>
+</blockquote>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Ensure that time slot of session appointments are reserved for the Braver Lab both on the Bay 3 outlook calendar (Bay 3 Prisma from directory)
+by emailing <code>*****@npg.wustl.edu</code> (Bay 3 Users) and <code>*****@npg.wustl.edu</code> (NIL Scheduling) with requested times, indicating that the protocol is NP# 1025 or 1095 (DMCC2 and 3, respectively), and reserve parking space.</p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Create a session on the Google calendar on the “DMCC HCP Scanning” calendar that lists the two responsible RAs (email them if necessary, to inform them of these appointments) and dates and times of the sessions, along with the participant ID and session number.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Introduce the new appointments into the STRATA scheduling system</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Log in to STRATA as indicated above (remember to choose “DMCC2” when prompted)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Make yourself or another RA available as a resource during the time during which the appointment will be scheduled by choosing ‘update availability’ and following prompts. Mark your availability from 7:00am until 11:45pm and set to repeat for the next 8 weeks). 
+    <em>It does not matter which RAs are marked as available- this is just a formality</em></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Click anywhere on the calendar to create an event, and fill in the pop-up window with the following details:<ul>
+<li>MFR group ID (without <code>:001</code> or <code>:002</code>) of subject, <code>001=mark PROBAND</code> for relationship, <code>002=mark TWIN</code> for relationship</li>
+<li>For session 1, mark as “baseline session”, and for session 2 and 3, mark as “follow-up session”.
+  Mark the behavioral session as a baseline session if the participant has a behavioral session.</li>
+<li>Time appointment starts and ends</li>
+<li>Mark “N” for Contact Resource</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
-       <div class="md-copyright__highlight">
-        Copyright © 2022
-       </div>
-       Made with
-       <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
-        Material for MkDocs
-       </a>
-      </div>
-     </div>
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023
     </div>
-   </footer>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
   </div>
-  <div class="md-dialog" data-md-component="dialog">
-   <div class="md-dialog__inner md-typeset">
-   </div>
-  </div>
-  <script id="__config" type="application/json">
-   {"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}
-  </script>
-  <script src="../../assets/javascripts/bundle.8aa65030.min.js">
-  </script>
- </body>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
 </html>

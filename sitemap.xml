@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://nipreps.org/mriqc-sops/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/changes/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/changes/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/data-collection/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/data-collection/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/data-storage/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/data-storage/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/post-session/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/post-session/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/preprocessing/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/preprocessing/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/qa-qc/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/qa-qc/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/release/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/release/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/recruitment-scheduling-screening/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/recruitment-scheduling-screening/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/recruitment-scheduling-screening/example1/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/recruitment-scheduling-screening/example1/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nipreps.org/mriqc-sops/recruitment-scheduling-screening/example2/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <loc>https://www.nipreps.org/sops-cookiecutter/recruitment-scheduling-screening/example2/</loc>
+         <lastmod>2023-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
