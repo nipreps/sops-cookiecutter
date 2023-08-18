@@ -1,4 +1,4 @@
-git-changelog
+git+https://github.com/oesteban/git-changelog.git@experimental
 markdown-include
 mkdocs
 mkdocs-macros-plugin
