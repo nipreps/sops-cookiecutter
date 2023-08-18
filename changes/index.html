@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#2300-august-18-2023" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -207,9 +212,65 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Change History
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Change History
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2300-august-18-2023" class="md-nav__link">
+    23.0.0 (August 18, 2023)
+  </a>
+  
+    <nav class="md-nav" aria-label="23.0.0 (August 18, 2023)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements-new-features-and-additions" class="md-nav__link">
+    Enhancements, new features, and additions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    Bug Fixes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-and-continuous-integration" class="md-nav__link">
+    Maintenance and Continuous Integration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -400,6 +461,48 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2300-august-18-2023" class="md-nav__link">
+    23.0.0 (August 18, 2023)
+  </a>
+  
+    <nav class="md-nav" aria-label="23.0.0 (August 18, 2023)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhancements-new-features-and-additions" class="md-nav__link">
+    Enhancements, new features, and additions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    Bug Fixes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-and-continuous-integration" class="md-nav__link">
+    Maintenance and Continuous Integration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -415,24 +518,46 @@
 
   <h1>Change History</h1>
 
-<table>
-<thead>
-<tr>
-<th>Version</th>
-<th>Date</th>
-<th>Description / comments</th>
-<th>By</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>22.0.0</td>
-<td>2022-02-21</td>
-<td>Initial draft</td>
-<td>@oesteban</td>
-</tr>
-</tbody>
-</table>
+<p>All notable changes to these SOPs are documented below, starting with the most recent version of the document.</p>
+<div class="admonition note">
+<p class="admonition-title">You found an error</p>
+<p>If you want to check the list of open issues, please proceed to our <a href="https://github.com/nipreps/sops-cookiecutter/issues">issue tracker</a>.</p>
+<p>If you have identified a problem, a typo, or something missing, and you know it is not in our tracker, please report it by <a href="https://github.com/nipreps/sops-cookiecutter/issues/new">creating a new issue</a>.</p>
+</div>
+<!-- insertion marker -->
+<h2 id="2300-august-18-2023"><a href="https://github.com/nipreps/sops-cookiecutter/releases/tag/23.0.0">23.0.0</a> (August 18, 2023)<a class="headerlink" href="#2300-august-18-2023" title="Permanent link">&para;</a></h2>
+<p><small><a href="https://github.com/nipreps/sops-cookiecutter/compare/4223f80a2295f5a0e089df8ec4361e9f8c5c0a99...23.0.0">Compare with first commit</a></small></p>
+<h3 id="enhancements-new-features-and-additions">Enhancements, new features, and additions<a class="headerlink" href="#enhancements-new-features-and-additions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Finalize configuration of changes tracking with <em>git-changelog</em>
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/185b059b2bb41700e7d6f7a2d961a23dbef220d8">185b059</a> by Oscar Esteban).</li>
+<li>Add changelog update routine
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/753f84f9aff4a32ca030650122dc03a3d3a8eb75">753f84f</a> by Oscar Esteban).</li>
+<li>Clarify secrets file utilization
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/ad01409023fd16c455e9e446170a18e1f527ea33">ad01409</a> by Oscar Esteban).</li>
+<li>Outsource secrets file and document how to use the secrets
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/150326ef257db5a4973f83a847250360a7f7f344">150326e</a> by Oscar Esteban). Related issues/PRs: <a href="https://github.com/nipreps/sops-cookiecutter/issues/2">#2</a>.</li>
+<li>Add study settings
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/65b326fa17ac707a4018d92c416a2203bc6662b7">65b326f</a> by Oscar Esteban).</li>
+<li>Add <em>codespell</em>
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/2318efe8382c1a2e5556bb4d2c5080e3e716bbe7">2318efe</a> by Oscar Esteban). Related issues/PRs: <a href="https://github.com/nipreps/sops-cookiecutter/issues/97">#97</a>.</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Typo
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/9f4051b6fe8a1454ebe739dec491eabaf1c42bfe">9f4051b</a> by Oscar Esteban).</li>
+<li>Example including the wrong file
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/befc05c8d25a54bfda070f0663e687abe644c0b0">befc05c</a> by Oscar Esteban).</li>
+<li>Add secrets
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/ef819373109ee5dabc65f4f5f2b7f9786dce4401">ef81937</a> by Oscar Esteban). Related issues/PRs: <a href="https://github.com/nipreps/sops-cookiecutter/issues/2">#2</a>.</li>
+<li>Build failing
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/660098bb7c2256f540ea83604c8c348b6d684755">660098b</a> by Oscar Esteban).</li>
+</ul>
+<h3 id="maintenance-and-continuous-integration">Maintenance and Continuous Integration<a class="headerlink" href="#maintenance-and-continuous-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>.nojekyll</code> file during deployment
+ (<a href="https://github.com/nipreps/sops-cookiecutter/commit/7509abd7f60a5b48696dd5210e8976bd7076b45a">7509abd</a> by Oscar Esteban).</li>
+</ul>
 
 
 
