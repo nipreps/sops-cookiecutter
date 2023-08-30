@@ -26,6 +26,10 @@ theme:
     - tabs
     - content.code.copy
     - content.code.annotate
+  icon:
+    admonition:
+      thanks: octicons/code-of-conduct-16
+      quote: octicons/comment-16
 
 plugins:
   - search

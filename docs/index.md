@@ -4,6 +4,12 @@ Standard Operating Procedures (SOPs) bundle the documentation that describes the
 Within your lab or your institution, the goal is that experimenters can carry out new data collection according to the overarching study plans with minimal supervision.
 Beyond the doors of your lab or institution, SOPs are a critical tool to maximize the reproducibility of your research by others.
 
+??? thanks "Thanks to Dr. Jo Etzel and to McKenzie P. Hagen"
+
+    Thanks Jo, for seeding the ideas and demonstrating the importance of SOPs in our scientific endeavor and your excellent work in the dissemination of [the DMCC Project](https://mfr.osf.io/render?url=https://osf.io/6r9f8/?direct%26mode=render%26action=download%26mode=render) that includes SOPs we have reused as examples here.
+    Thanks McKenzie, for lending your experience as an RA at Stanford to fill some of the early drafts of the acquisition examples and checklists.
+
+
 ## Why *{{ settings.general.name }}*?
 
 *{{ settings.general.name }}* is a boilerplate for SOPs, and it provides a minimally working framework to bootstrap and continue your own SOPs.
@@ -36,7 +42,7 @@ Indeed, opening your SOPs will ensure all procedural details of you experiment a
 
 ### Step 1: derive your own repository from the template
 
-!!! info "SOPs :heart: checklists"
+!!! abstract "SOPs :heart: checklists"
 
     Checklists are very effective in ensuring all the steps of a procedure are followed to the letter, thereby minimizing the chance of misshapen.
 
@@ -135,9 +141,15 @@ If you want to keep secrets that are inaccessible to others (even after making t
     The default filter allows the replacement of unavailable secrets (because in this case the user does not have access to the secret) with redaction symbols.
     For example, using `{{ '{{ secrets.logins.password_computer1 | default("*****") }}' }}` at this point produces a series of stars `{{ secrets.logins.password_computer1 | default("*****") }}` to indicate that a secret could not be accessed at this point.
 
-!!! warning "To ensure your secrets are not exposed, you just need to protect the little submodule"
+!!! warning "To ensure your secrets are not exposed, you just need to protect the git submodule"
 
     Now private information is accessible only for users who have access to the submodule, and they will need to explicitly add the submodule for the secrets to be rendered.
+
+??? important "Examples showing how to use secrets"
+
+    The *secrets* feature is demonstrated within these SOPs (see [Example 2 in the recruitment section](recruitment-scheduling-screening/example2.md#scheduling), where phone numbers, e-mail addresses, and names are redacted).
+
+    The [corresponding code](https://github.com/nipreps/sops-cookiecutter/blob/32cd1721d84ce02e8504f947d05ea096ccce89c7/docs/recruitment-scheduling-screening/example2.md) is available on the GitHub repository
 
 ## Snapshotting the documentation for archival and dissemination
 
