@@ -51,54 +51,55 @@ Once the call is concluded:
       2/14/19 called but participant said to call back in 6 months-KN
       ```
 - [x] Send an email to the participant (**with copy to all RAs running the session**) providing more information about the session.
-      As for all email communication with participants, use the `***********@gmail.com` account.
+      As for all email communication with participants, use the `{{ secrets.email.gmail | default("***********@gmail.com") }}` account.
 
-      > Hello ~enter participant name~,
-      >
-      > Thanks so much for taking the time to talk with me today.
-      > We are so excited that you'll be able to participate in our study on <enter the days of sessions (e.g. Wednesday 1/1, Friday 1/3, and Saturday 1/4)\>.
-      >
-      > Here is some more information about your sessions.
-      >
-      > Your appointments will take place over three to four sessions:
-      >
-      > 1. ~enter day of week, calendar date, and time frame of session 1 (scanning or  behavioral)~ (e.g. Wednesday, January 1 st , from 6:00pm until about 8:00pm)
-      >
-      > 2. ~enter day of week, calendar date, and time frame of session 2~
-      >
-      > 3. ~enter day of week, calendar date, and time frame of session 3~
-      >
-      > 4. ~enter day of week, calendar date, and time frame of session 4 (if behavioral)~
-      >
-      > For all of these appointments, please meet us in the main waiting area of the East Imaging Building on University of Los Angeles' Medical School campus.
-      > The address of this building is **251 N Bristol Ave, Los Angeles**, **CA 90049**.
-      >
-      > There is a parking lot directly across the street from the entrance to the building, in which there are spots marked with red and white signs that say "*For Research Participants Only*."
-      > **Please, park in one of those designated spots**, and when you come inside, we will give you an authorizing permit to place on your dashboard.
-      >
-      > You do not have to bring anything in particular to your sessions.
-      > Due to changing MRI facility policies, we are now asking participants to change into scrubs before entering the scanner.
-      > We will ask you to remove your underwear if they are not 100% cotton.
-      > Please do not wear nail polish or heavy eye makeup to your sessions.
-      > We  have snacks available, but if you prefer a full meal please feel free to bring one along.
-      >
-      > During your visits, you'll be doing computerized tasks both while inside and outside of the MRI scanner, filling out some questionnaires, and providing saliva samples.
-      >
-      > If you have any questions before your appointment, feel free to email me here to ask them, or call me at the office at (###) ###-####.
-      >
-      > If you have trouble finding us on the day of your appointment, you can call me (or my colleague) at ~enter first scanner's cell phone number: (Alex: ###-###-####, Mike: ###-###-####, Shelly: ###-###-####)~.
-      >
-      >
-      > Thanks again for your interest in participating.
-      >
-      > Have a great day!
-      >
-      > Best,
-      >
-      > ~enter your name~
+    ???+ quote "E-mail communication template"
+
+        Hello ~enter participant name~,
+
+        Thanks so much for taking the time to talk with me today.
+        We are so excited that you'll be able to participate in our study on ~enter the days of sessions (e.g., Wednesday 1/1, Friday 1/3, and Saturday 1/4)~.
+
+        Here is some more information about your sessions.
+
+        Your appointments will take place over three to four sessions:
+
+        1. ~enter day of week, calendar date, and time frame of session 1 (scanning or behavioral), e.g., Wednesday, January 1 st, from 6:00pm until about 8:00pm~
+
+        2. ~enter day of week, calendar date, and time frame of session 2~
+
+        3. ~enter day of week, calendar date, and time frame of session 3~
+
+        4. ~enter day of week, calendar date, and time frame of session 4 (if behavioral)~
+
+        For all of these appointments, please meet us in the main waiting area of the East Imaging Building on University of Los Angeles' Medical School campus.
+        The address of this building is **251 N Bristol Ave, Los Angeles**, **CA 90049**.
+
+        There is a parking lot directly across the street from the entrance to the building, in which there are spots marked with red and white signs that say "*For Research Participants Only*."
+        **Please, park in one of those designated spots**, and when you come inside, we will give you an authorizing permit to place on your dashboard.
+
+        You do not have to bring anything in particular to your sessions.
+        Due to changing MRI facility policies, we are now asking participants to change into scrubs before entering the scanner.
+        We will ask you to remove your underwear if they are not 100% cotton.
+        Please do not wear nail polish or heavy eye makeup to your sessions.
+        We have snacks available, but if you prefer a full meal please feel free to bring one along.
+
+        During your visits, you'll be doing computerized tasks both while inside and outside of the MRI scanner, filling out some questionnaires, and providing saliva samples.
+
+        If you have any questions before your appointment, feel free to email me here to ask them, or call me at the office at {{ secrets.phones.office | default("###-###-####") }}.
+
+        If you have trouble finding us on the day of your appointment, you can call me (or my colleague) at ~enter first scanner's cell    phone number: ({{ secrets.names.experimenter1 | default("Jane") }}: {{ secrets.phones.experimenter1 | default("###-###-####") }}, {{ secrets.names.experimenter2 | default("Claire") }}: {{ secrets.phones.experimenter2 | default("###-###-####") }}, {{ secrets.names.experimenter3 | default("Rob") }}: {{ secrets.phones.experimenter3 | default("###-###-####") }})~.
+
+        Thanks again for your interest in participating.
+
+        Have a great day!
+
+        Best,
+
+        ~enter your name~
 
 - [x] Ensure that time slot of session appointments are reserved for the Braver Lab both on the Bay 3 outlook calendar (Bay 3 Prisma from directory)
-by emailing `*****@npg.wustl.edu` (Bay 3 Users) and `*****@npg.wustl.edu` (NIL Scheduling) with requested times, indicating that the protocol is NP# 1025 or 1095 (DMCC2 and 3, respectively), and reserve parking space.
+by emailing `{{ secrets.email.bay3_users | default("*****@npg.wustl.edu") }}` (Bay 3 Users) and `{{ secrets.email.nil_users | default("*****@npg.wustl.edu") }}` (NIL Scheduling) with requested times, indicating that the protocol is NP# 1025 or 1095 (DMCC2 and 3, respectively), and reserve parking space.
 - [x] Create a session on the Google calendar on the “DMCC HCP Scanning” calendar that lists the two responsible RAs (email them if necessary, to inform them of these appointments) and dates and times of the sessions, along with the participant ID and session number.
 - [x] Introduce the new appointments into the STRATA scheduling system
   - [x] Log in to STRATA as indicated above (remember to choose “DMCC2” when prompted)
