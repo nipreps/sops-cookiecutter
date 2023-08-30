@@ -149,7 +149,7 @@ If you want to keep secrets that are inaccessible to others (even after making t
 
     The *secrets* feature is demonstrated within these SOPs (see [Example 2 in the recruitment section](recruitment-scheduling-screening/example2.md#scheduling), where phone numbers, e-mail addresses, and names are redacted).
 
-    The [corresponding code](https://github.com/nipreps/sops-cookiecutter/blob/32cd1721d84ce02e8504f947d05ea096ccce89c7/docs/recruitment-scheduling-screening/example2.md) is available on the GitHub repository
+    The [corresponding code](https://github.com/nipreps/sops-cookiecutter/blob/2569b8a091cce3080536eb337e151b87aa6b74cd/docs/recruitment-scheduling-screening/example2.md) is available on the GitHub repository
 
 ## Snapshotting the documentation for archival and dissemination
 
