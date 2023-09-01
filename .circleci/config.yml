@@ -1,0 +1,31 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Install system dependencies
+          command: |
+            apt-get update && apt-get install -y libcairo2-dev libpango1.0-dev libgdk-pixbuf2.0-dev
+      - run:
+          name: Create virtual environment
+          command: python -m venv myenv
+      - run:
+          name: Activate virtual environment
+          command: source myenv/bin/activate
+      - run:
+          name: Install requirements
+          command: python -m pip install -r requirements.txt
+      - run:
+          name: Build preview
+          command: python -m mkdocs build --site-dir _SOPs_preview
+      - store_artifacts:
+          path: _SOPs_preview
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+
